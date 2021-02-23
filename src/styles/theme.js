@@ -29,10 +29,7 @@ const mojoTheme = extendTheme({
       "html/body": {
         color: isDark(colorMode) ? "brand.400" : "brand.900",
         backgroundColor: isDark(colorMode) ? "brand.900" : "brand.400",
-        fonts: {
-          heading: "Inter",
-          body: "Inter",
-        },
+        fontFamily: "Inter",
       },
       a: {
         color: isDark(colorMode) ? "brand.300" : "brand.600",
