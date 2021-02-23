@@ -29,9 +29,6 @@ const mojoTheme = extendTheme({
       "html/body": {
         color: isDark(colorMode) ? "brand.400" : "brand.900",
         backgroundColor: isDark(colorMode) ? "brand.900" : "brand.400",
-        fontFamily: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif`,
       },
       a: {
         color: isDark(colorMode) ? "brand.300" : "brand.600",
