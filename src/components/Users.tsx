@@ -80,6 +80,13 @@ export default function Users() {
                 </Td>
               </Tr>
             ))}
+            {!usersList.length ? (
+              <Tr>
+                <Td colSpan={3} textAlign="center">
+                  No users found 😢
+                </Td>
+              </Tr>
+            ) : null}
           </Tbody>
         </Table>
       </Box>
