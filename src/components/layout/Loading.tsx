@@ -14,7 +14,13 @@ export default function Loading({
       alignItems="center"
       height="50vh"
     >
-      <Image src={LoadingGif} alt={message} width={width} height={height} />
+      <Image
+        loading="eager"
+        src={LoadingGif}
+        alt={message}
+        width={width}
+        height={height}
+      />
       <Text mt={0}>{message}</Text>
     </Flex>
   );
