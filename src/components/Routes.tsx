@@ -9,10 +9,10 @@ export default function Routes() {
     <Router>
       <Navbar />
       <Switch>
-        {routes.map((route) => (
-          <Route key={route.path} exact path={route.path}>
+        {routes.map(({ path, component: Component }) => (
+          <Route key={path} exact path={path}>
             <Suspense fallback={<Loading message="Fetching data..." />}>
-              <route.component />
+              <Component />
             </Suspense>
           </Route>
         ))}
