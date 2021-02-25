@@ -17,7 +17,7 @@ export default function Loading({
       <Image
         loading="eager"
         src={LoadingGif}
-        alt={message}
+        alt="Loading gif..."
         width={width}
         height={height}
       />
