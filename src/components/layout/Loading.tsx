@@ -1,11 +1,6 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import LoadingGif from "../../assets/gifs/loading.gif";
-
-export interface LoadingProps {
-  message: string;
-  width?: number;
-  height?: number;
-}
+import { LoadingProps } from "../../types/components";
 
 export default function Loading({
   message,

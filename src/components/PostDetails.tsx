@@ -20,7 +20,7 @@ import { fetcher } from "../lib/fetcher";
 import { formatWordCount } from "../lib/wordCount";
 import Comments from "./layout/Comments";
 import ErrorMessage from "./layout/Error";
-import { MatchProps, PostsData } from "./Posts";
+import { MatchProps, PostsData } from "../types/components";
 
 export default function PostDetails() {
   const { postId, userId } = useParams<MatchProps>();

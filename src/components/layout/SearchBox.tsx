@@ -6,9 +6,10 @@ import {
   Button,
   useColorMode,
 } from "@chakra-ui/react";
+import { memo } from "react";
 import { SearchProps } from "../../types/components";
 
-export default function SearchBox({
+function SearchBox({
   updateSearchTerm,
   placeholder,
   isFullWidth = false,
@@ -40,3 +41,5 @@ export default function SearchBox({
     </InputGroup>
   );
 }
+
+export default memo(SearchBox);

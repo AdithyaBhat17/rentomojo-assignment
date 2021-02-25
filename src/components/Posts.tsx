@@ -3,21 +3,10 @@ import { ChangeEvent, useCallback, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import useSWR, { cache } from "swr";
 import { fetcher } from "../lib/fetcher";
+import { MatchProps, PostsData } from "../types/components";
 import ErrorMessage from "./layout/Error";
 import Post from "./layout/Post";
 import SearchBox from "./layout/SearchBox";
-
-export interface MatchProps {
-  userId: string;
-  postId: string;
-}
-
-export type PostsData = {
-  userId: number;
-  title: string;
-  body: string;
-  id: string;
-};
 
 export default function Posts() {
   const { userId } = useParams<MatchProps>();

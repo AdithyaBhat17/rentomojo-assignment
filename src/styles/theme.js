@@ -44,7 +44,7 @@ const mojoTheme = extendTheme({
   },
   config: {
     initialColorMode: "dark",
-    useSystemColorMode: false,
+    useSystemColorMode: true,
   },
   fonts: {
     heading: "Inter, sans-serif",

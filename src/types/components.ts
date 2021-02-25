@@ -20,3 +20,21 @@ export type CommentsData = {
   body: string;
   id: string;
 };
+
+export interface LoadingProps {
+  message: string;
+  width?: number;
+  height?: number;
+}
+
+export interface MatchProps {
+  userId: string;
+  postId: string;
+}
+
+export type PostsData = {
+  userId: number;
+  title: string;
+  body: string;
+  id: string;
+};

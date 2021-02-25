@@ -6,14 +6,17 @@ import ErrorMessage from "./Error";
 import Loading from "./Loading";
 
 export default function Comments({ postId }: { postId: string }) {
+  // fetch comments
   const { data: comments, error } = useSWR<CommentsData[]>(
     `commentsForPost${postId}`,
     () => fetcher(`comments?postId=${postId}`)
   );
 
+  // handle errors
   if (error)
     return <ErrorMessage message="Failed to fetch comments for this post" />;
 
+  // add a loading state to the UI since we are not using suspense here.
   if (!comments) return <Loading message="Fetching comments..." />;
 
   return (

@@ -1,9 +1,9 @@
 import { lazy } from "react";
-import PageNotFound from "../components/PageNotFound";
-import PostDetails from "../components/PostDetails";
-import Posts from "../components/Posts";
 
 const Users = lazy(() => import("../components/Users"));
+const Posts = lazy(() => import("../components/Posts"));
+const PostDetails = lazy(() => import("../components/PostDetails"));
+const PageNotFound = lazy(() => import("../components/PageNotFound"));
 
 export const routes = [
   {
