@@ -1,5 +1,5 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
-import LoadingGif from "../../assets/gifs/loading.gif";
+import LoadingGif from "../../assets/gifs/loading_compressed.gif";
 import { LoadingProps } from "../../types/components";
 
 export default function Loading({
