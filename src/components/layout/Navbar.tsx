@@ -1,5 +1,5 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Button, Flex, Grid, Heading, useColorMode } from "@chakra-ui/react";
+import { Button, Flex, Heading, useColorMode } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
