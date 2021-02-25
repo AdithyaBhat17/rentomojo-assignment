@@ -6,16 +6,13 @@ import {
   Button,
   useColorMode,
 } from "@chakra-ui/react";
-import { ChangeEvent } from "react";
-
-export interface SearchProps {
-  updateSearchTerm: (event: ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
-}
+import { SearchProps } from "../../types/components";
 
 export default function SearchBox({
   updateSearchTerm,
   placeholder,
+  isFullWidth = false,
+  disabled = false,
 }: SearchProps) {
   const { colorMode } = useColorMode();
 
@@ -23,10 +20,11 @@ export default function SearchBox({
 
   return (
     <InputGroup
-      maxWidth={{ sm: "100%", lg: "30%" }}
+      maxWidth={{ sm: "100%", lg: isFullWidth ? "100%" : "30%" }}
       borderColor={isDark ? "brand.400" : "brand.600"}
     >
       <Input
+        disabled={disabled}
         type="text"
         placeholder={placeholder}
         onChange={updateSearchTerm}

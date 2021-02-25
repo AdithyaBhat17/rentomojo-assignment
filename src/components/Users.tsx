@@ -9,7 +9,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { isDark } from "../styles/theme";
-import { ChangeEvent, useMemo, useState } from "react";
+import { ChangeEvent, useCallback, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import useSWR from "swr";
 import { fetcher } from "../lib/fetcher";
@@ -25,6 +25,13 @@ export default function Users() {
   });
 
   const [searchTerm, setSearchTerm] = useState("");
+
+  const updateSearchTerm = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setSearchTerm(event.target.value);
+    },
+    []
+  );
 
   const usersList = useMemo(() => {
     const localeSearchTerm = searchTerm.toLocaleLowerCase();
@@ -42,10 +49,6 @@ export default function Users() {
   if (error)
     return <ErrorMessage message={error?.message || "Error fetching users"} />;
 
-  function updateSearchTerm(event: ChangeEvent<HTMLInputElement>) {
-    setSearchTerm(event.target.value);
-  }
-
   return (
     <Box mx="10">
       <SearchBox
@@ -56,9 +59,9 @@ export default function Users() {
         my="5"
         overflowX="auto"
         borderRadius={10}
+        border="1px solid"
         borderColor={isDark(colorMode) ? "brand.400" : "brand.600"}
-        borderWidth="1px"
-        borderStyle="solid"
+        boxShadow="sm"
       >
         <Table variant="striped" px="10" size="md" colorScheme="gray">
           <Thead>
