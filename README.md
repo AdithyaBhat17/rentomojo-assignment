@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+## mojo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Take home assignment by Rentomojo. https://mojo.adithyabhat.com
 
-## Available Scripts
+#### Libraries Used
+- React
+- ReactDOM
+- React Router DOM
+- Chakra UI
+    - Emotion
+- SWR (Data fetching using the Stale while re-validate protocol.)
 
-In the project directory, you can run:
+### Caveats
 
-### `yarn start`
+The pagination API from typicode did not work as expected so I skipped adding pagination to the UI. I skipped adding pagination for the users table since there were only 10 users for now.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### State Management.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I follow this idea of keeping the application and server (Data from external sources) state separate.  
+I've used React hooks to manage local state and SWR to manage server state. SWR provides a better user experience by showing stale data to the users and fetching latest data in the background. If the newly fetched data is different from the cached data, the cache is flushed and replaced with this newly fetched data. SWR also allows us to show the latest data possible when users switch to a different tab and come back to the application. (Read https://swr.now.sh for more details on this.)
 
-### `yarn test`
+### Illustrations and Animations
+- Lottie Files (Loading state)
+- ManyPixels (404 illustration)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Fonts Used
+- Inter
