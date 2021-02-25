@@ -8,7 +8,7 @@ Take home assignment by Rentomojo. https://mojo.adithyabhat.com
 - React Router DOM
 - Chakra UI
     - Emotion
-- SWR (Data fetching using the Stale while re-validate protocol.)
+- SWR (Data fetching using the Stale while re-validate strategy.)
 
 ### State Management.
 
