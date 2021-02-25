@@ -1,5 +1,5 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
-import LoadingGif from "../../assets/gifs/loading.gif";
+import LoadingGif from "../../assets/gifs/loading_compressed.gif";
 import { LoadingProps } from "../../types/components";
 
 export default function Loading({
@@ -14,7 +14,13 @@ export default function Loading({
       alignItems="center"
       height="50vh"
     >
-      <Image src={LoadingGif} alt={message} width={width} height={height} />
+      <Image
+        loading="eager"
+        src={LoadingGif}
+        alt={message}
+        width={width}
+        height={height}
+      />
       <Text mt={0}>{message}</Text>
     </Flex>
   );

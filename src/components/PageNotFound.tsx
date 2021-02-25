@@ -11,6 +11,7 @@ export default function PageNotFound() {
     >
       <Image
         src={FourOhFour}
+        loading="eager"
         alt="Page not found"
         title="page not found"
         width="200"
